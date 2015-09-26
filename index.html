@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <script src="jquery.js"></script>
-    <script src="data_generator.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/styles/app.css">
+    <script src="assets/scripts/jquery.js"></script>
+    <script src="assets/scripts/data_generator.js"></script>
+    <script src="assets/scripts/moment.min.js"></script>
+    <script async src="assets/scripts/app.js"></script>
   </head>
+
   <body>
-    <script>
 
-      $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
+    <div id="top-container">
+      <div id="left">
+        <div id="tweet-stream"></div>
+      </div>
+      <div id="right">
+        <div id="tweet-form">
+          <form id="tweetform" onsubmit="return noSubmit()">
+            TWITTLE! <input type="textarea" name="tweet" id="tweet">
+          </form>
+        </div>
+        <p></p>
+        <div id="show-mine">show my twittles</div>
+        <p></p>
+        <div id="user-name"></div>
+        <p></p>
+        <div id="user-tweets">
+          <p></p>
+        </div>
+      </div>
+    </div>
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
-
-      });
-
-    </script>
   </body>
+
 </html>
