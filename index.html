@@ -2,35 +2,62 @@
 <html>
 
   <head>
+    <link rel="stylesheet" type="text/css" href="assets/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/gridism.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/app.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <script src="assets/scripts/jquery.js"></script>
     <script src="assets/scripts/data_generator.js"></script>
     <script src="assets/scripts/moment.min.js"></script>
     <script async src="assets/scripts/app.js"></script>
   </head>
 
-  <body>
+  <body class="wrap wider">
 
-    <div id="top-container">
-      <div id="left">
-        <div id="tweet-stream"></div>
-      </div>
-      <div id="right">
-        <div id="tweet-form">
-          <form id="tweetform" onsubmit="return noSubmit()">
-            TWITTLE! <input type="textarea" name="tweet" id="tweet">
-          </form>
+    <header>
+      <div class="grid">
+
+        <div class="unit whole center-on-mobiles">
+          <h1><a href="https://github.com/pbhorjee/2015-10-twittler">Twittler!</a></h1>
+          <p class="lead">because <span class="one">.</span><span class="two">.</span><span class="three">.</span> you know, you gotta do it or you don't exist or whatever.</p>
+          <span id="github">
+            <a href="https://github.com/pbhorjee/2015-10-twittler" class="button" target="_blank">View on GitHub</a>
+          </span>
         </div>
-        <p></p>
-        <div id="show-mine">show my twittles</div>
-        <p></p>
-        <div id="user-name"></div>
-        <p></p>
-        <div id="user-tweets">
-          <p></p>
-        </div>
+
       </div>
-    </div>
+    </header>
+
+    <section class="twittles">
+      <div class="grid">
+
+        <div class="unit half">
+          <div id="tweet-stream"></div>
+        </div>
+
+        <div class="unit half">
+
+          <div id="tweet-form">
+            <form id="tweetform" onsubmit="return noSubmit()">
+              <span id="yourself" class="ital red">Twittle Yourself!</span> <input type="text" name="tweet" id="tweet" maxlength="160">
+              <span id="to-go" class="small-text"></span>
+            </form>
+          </div>
+
+          <div id="show-buttons">
+            <a id="show-mine" class="button small">Show my Twittles</a>
+            <a id="show-none" class="button small">Show no User Twittles</a>
+          </div>
+
+          <div id="user-name"></div>
+
+          <div id="user-tweets"></div>
+
+        </div>
+
+      </div>
+    </section>
 
   </body>
 
