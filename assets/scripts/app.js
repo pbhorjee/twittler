@@ -2,6 +2,11 @@
 $(document).ready(function() {
     var userTweetsUser;
 
+    //// TODO: DOM will get huge over time.
+    // Do better stuff with the tweets than just hiding them with overflow: auto
+    //  Make buttons to allow them to see more or less tweets and thewn grab those from the js objects to show
+
+
     //// utility stuff
     var $tweetStreamContainer = $('#tweet-stream');
     clearElement($tweetStreamContainer);
